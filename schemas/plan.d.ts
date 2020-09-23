@@ -1,4 +1,4 @@
-interface Plan {
+interface Plan extends FirebaseDocumentObject {
   uid: string;
   title: string;
   createTime: FirebaseFirestore.Timestamp;
