@@ -8,6 +8,12 @@ interface Plan extends FirebaseDocumentObject {
   places?: string[];
 }
 
+interface PlanItem extends FirebaseDocumentObject {
+  uid: string;
+  placeId: string;
+  title: string;
+}
+
 interface CreatePlanRequest {
   uid: string;
   title: string;
