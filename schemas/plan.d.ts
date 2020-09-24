@@ -2,7 +2,7 @@ interface Plan extends FirebaseDocumentObject {
   uid: string;
   title: string;
   createTime: FirebaseFirestore.Timestamp;
-  planItems: firebase.firestore.DocumentReference[];
+  planItems: FirebaseFirestore.DocumentReference[];
   // old
   // places => items 20200924
   places?: string[];
