@@ -7,8 +7,8 @@ interface DocIdRequest {
 }
 
 interface CreatePlanItemRequest {
-  // internal : uid is require. external : uid will be provied with context
-  uid?: string;
+  planDocId: string;
+  uid: string;
   title: string;
   placeId: string;
 }
