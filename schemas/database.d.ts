@@ -1,3 +1,7 @@
 interface FirebaseDocumentObject {
-  docId?: string;
+  docId: string;
+}
+
+interface DatabaseActionResult extends ActionResult {
+  docId: string;
 }
