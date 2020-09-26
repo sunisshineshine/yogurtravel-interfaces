@@ -14,9 +14,5 @@ interface PlanItem extends FirebaseDocumentObject {
   uid: string;
   placeId: string;
   title: string;
-}
-
-interface CreatePlanRequest {
-  uid: string;
-  title: string;
+  planDocId: string;
 }

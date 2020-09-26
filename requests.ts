@@ -2,8 +2,13 @@ interface UidRequest {
   uid: string;
 }
 
-interface DocIdRequest {
-  id: string;
+interface DocIdRequest extends UidRequest {
+  docId: string;
+}
+
+interface CreatePlanRequest {
+  uid: string;
+  title: string;
 }
 
 interface CreatePlanItemRequest {
