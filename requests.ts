@@ -6,12 +6,12 @@ interface DocIdRequest extends UidRequest {
   docId: string;
 }
 
-interface CreatePlanRequest {
+interface CreatePlanRequest extends TimeBased {
   uid: string;
   title: string;
 }
 
-interface CreatePlanItemRequest {
+interface CreatePlanItemRequest extends TimeBased {
   planDocId: string;
   uid: string;
   title: string;

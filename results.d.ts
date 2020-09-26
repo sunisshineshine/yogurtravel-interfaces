@@ -3,6 +3,10 @@ interface ActionResult {
   error_message?: string;
 }
 
+interface DatabaseActionResult extends ActionResult {
+  docId: string;
+}
+
 interface PlaceDetailResponse {
   status: google.maps.places.PlacesServiceStatus;
   result: google.maps.places.PlaceResult;

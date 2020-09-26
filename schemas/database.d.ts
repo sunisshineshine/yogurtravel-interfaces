@@ -2,6 +2,7 @@ interface FirebaseDocumentObject {
   docId: string;
 }
 
-interface DatabaseActionResult extends ActionResult {
-  docId: string;
+interface TimeBased {
+  startTime?: number;
+  endTime?: number;
 }
