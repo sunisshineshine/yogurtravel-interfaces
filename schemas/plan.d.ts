@@ -10,9 +10,8 @@ interface Plan extends FirebaseDocumentObject, TimeBased {
   places?: string[];
 }
 
-interface PlanItem extends FirebaseDocumentObject, TimeBased {
+interface PlanItem extends FirebaseDocumentObject, TimeBased, PlaceBased {
   uid: string;
-  placeId: string;
   title: string;
   planDocId: string;
 }

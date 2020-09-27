@@ -11,9 +11,8 @@ interface CreatePlanRequest extends TimeBased {
   title: string;
 }
 
-interface CreatePlanItemRequest extends TimeBased {
+interface CreatePlanItemRequest extends TimeBased, PlaceBased {
   planDocId: string;
   uid: string;
   title: string;
-  placeId: string;
 }
