@@ -3,6 +3,6 @@ interface FirebaseDocumentObject {
 }
 
 interface TimeBased {
-  startTime?: number;
-  endTime?: number;
+  startTime: number | null;
+  endTime: number | null;
 }
