@@ -16,3 +16,7 @@ interface CreatePlanItemRequest extends TimeBased, PlaceBased {
   uid: string;
   title: string;
 }
+
+interface UpdateRequest<T> extends FirebaseDocumentObject {
+  item: T;
+}
