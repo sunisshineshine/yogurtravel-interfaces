@@ -1,3 +1,5 @@
+// plan -> planitem -> eventitem
+
 interface Plan extends FirebaseDocumentObject, TimeBased {
   uid: string;
   title: string;
@@ -14,4 +16,9 @@ interface PlanItem extends FirebaseDocumentObject, TimeBased, PlaceBased {
   uid: string;
   title: string;
   planDocId: string;
+}
+
+interface EventItem extends FirebaseDocumentObject, TimeBased {
+  planItemDocId: string;
+  title: string;
 }
