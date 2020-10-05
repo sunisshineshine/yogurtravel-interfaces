@@ -1,19 +1,20 @@
-interface UidRequest {
-  uid: string;
-}
+interface UidRequest extends UserBased {}
 
-interface DocIdRequest extends UidRequest {
+interface DocIdRequest extends UserBased {
   docId: string;
 }
 
-interface CreatePlanRequest extends TimeBased {
-  uid: string;
+interface CreatePlanRequest extends TimeBased, UserBased {
   title: string;
 }
 
-interface CreatePlanItemRequest extends TimeBased, PlaceBased {
+interface CreatePlanItemRequest extends UserBased, TimeBased, PlaceBased {
   planDocId: string;
-  uid: string;
+  title: string;
+}
+
+interface CreateEventItemRequest extends UserBased, TimeBased {
+  planItemDocId: string;
   title: string;
 }
 

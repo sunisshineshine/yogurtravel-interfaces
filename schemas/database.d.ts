@@ -1,5 +1,7 @@
 interface FirebaseDocumentObject {
   docId: string;
+
+  createTime: number;
 }
 
 interface TimeBased {
@@ -12,4 +14,8 @@ interface PlaceBased {
   address: string | null;
   lat: number | null;
   lng: number | null;
+}
+
+interface UserBased {
+  uid: string;
 }

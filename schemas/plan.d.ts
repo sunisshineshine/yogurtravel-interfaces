@@ -1,10 +1,6 @@
 // plan -> planitem -> eventitem
-
-interface Plan extends FirebaseDocumentObject, TimeBased {
-  uid: string;
+interface Plan extends FirebaseDocumentObject, TimeBased, UserBased {
   title: string;
-  createTime: FirebaseFirestore.Timestamp;
-
   planItemIds: string[];
   // migration 20200925 : documentRef to string(id)
   planItems?: FirebaseFirestore.DocumentReference[];
@@ -12,13 +8,20 @@ interface Plan extends FirebaseDocumentObject, TimeBased {
   places?: string[];
 }
 
-interface PlanItem extends FirebaseDocumentObject, TimeBased, PlaceBased {
-  uid: string;
-  title: string;
+interface PlanItem
+  extends FirebaseDocumentObject,
+    TimeBased,
+    PlaceBased,
+    UserBased {
+  // parent
   planDocId: string;
+  title: string;
+  // 20201005 updated
+  eventItemIds: string[];
 }
 
-interface EventItem extends FirebaseDocumentObject, TimeBased {
+interface EventItem extends FirebaseDocumentObject, TimeBased, UserBased {
+  // parent
   planItemDocId: string;
   title: string;
 }
