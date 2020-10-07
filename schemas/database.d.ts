@@ -1,6 +1,5 @@
 interface FirebaseDocumentObject {
   docId: string;
-
   createTime: number;
 }
 
