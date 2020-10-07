@@ -5,3 +5,7 @@ interface DateCallBack {
 interface TimebasedCallBack {
   (time: TimeBased): void;
 }
+
+interface ClockCallBack {
+  (clock: Clock): void;
+}

@@ -4,3 +4,8 @@ interface NavItem {
 }
 
 type Week = Date[];
+
+interface Clock {
+  hours: number;
+  minutes: number;
+}
