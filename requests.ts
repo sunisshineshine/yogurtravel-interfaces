@@ -13,9 +13,9 @@ interface CreatePlanItemRequest extends UserBased, TimeBased, PlaceBased {
   title: string;
 }
 
-interface CreateEventItemRequest extends UserBased, TimeBased {
+interface CreateEventItemRequest extends UserBased {
   planItemDocId: string;
-  title: string;
+  content: string;
 }
 
 interface UpdateRequest<T> extends FirebaseDocumentObject {

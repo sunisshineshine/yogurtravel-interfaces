@@ -20,8 +20,8 @@ interface PlanItem
   eventItemIds: string[];
 }
 
-interface EventItem extends FirebaseDocumentObject, TimeBased, UserBased {
+interface EventItem extends FirebaseDocumentObject {
   // parent
   planItemDocId: string;
-  title: string;
+  content: string;
 }

@@ -1,4 +1,4 @@
-interface FirebaseDocumentObject {
+interface FirebaseDocumentObject extends UserBased {
   docId: string;
   createTime: number;
 }
